@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: url('faq-accordion-main/assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: contain;
+    
+    background-attachment: fixed;
+    background-color: rgb(249 238 255);
+    display: flex;
+justify-content: center;
+align-items: center;
+min-width: 100vw;
+min-height: 100vh;
+}
+
+.wholeSection{
+ /* position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;  */
+    width: 550px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap:18px;
+}
+#section{
+  
+    border-radius: 16px;
+    padding: 30px 40px ;
+    background-color: white;
+}
+.accordion-head-icon{
+    display: flex;
+    gap: 20px;
+    padding: 0 0 20px 0;
+}
+.accordion-head{
+    font-family: "Work Sans";
+font-size: 3rem;
+color: hsl(292, 42%, 14%);
+}
+.faq-icon-flex{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    align-content: center;
+    align-self: center;
+    padding: 10px 0 10px;
+    gap: 12px;
+
+}
+.faqBlock{
+    padding: 6px 0;
+  box-shadow: 0 0.3px 0 0 rgba(0,0,0,0.2);
+}
+
+.faqBlock.active .faq-icon-flex #icon1{
+    opacity: 0;
+    width: 0;
+}
+.faqBlock.active .faq-icon-flex #icon2{
+    opacity: 1;
+    position: relative;
+    width: 30px;
+}
+.faqBlock .faq-icon-flex #icon2{
+    opacity: 0;
+    position: absolute;
+    width: 0;
+}
+.faq-question{
+    font-size: 15px;
+    font-weight: 800;
+    font-family: "Work Sans";
+    text-decoration: none;
+    color: hsl(292, 42%, 14%);
+}
+.faq-question:hover{
+    color:rgb(173 40 235);
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.faq-answer{
+    display: none;
+
+}
+
+.faqBlock.active .faq-answer{
+display: inline-block;
+color: hsl(292, 16%, 49%);
+font-size: 13px;
+word-spacing: 2px;
+line-height: 20px;
+font-family: "Work Sans Regular";
+}
+.border{
+    box-shadow: none;
+}
+
+
+/*********************/
+/*      RESPONSIVE      */
+/**********************/
+@media (max-width: 90rem){
+    body{
+        background-size: auto;
+    }
+}
+@media (max-width: 56rem){
+    body {
+        background-image: url('faq-accordion-main/assets/images/background-pattern-desktop.svg');
+    background-size: auto;
+    }
+    .wholeSection{
+        width: 425px;
+    }
+    .accordion-head-icon{
+        gap: 10px;
+    }
+    .accordion-head-icon img{
+        width: 35px;
+    }
+    .accordion-head{
+        font-size: 2.6rem;
+    }
+    .faq-question{
+        font-size: 14px;
+    }
+    .faqBlock{
+        padding: 8px 0;
+    }
+    .faqBlock.active .faq-answer{
+        font-size: 11px;
+        line-height: 14px;
+
+    }
+    .faqBlock.active .faq-icon-flex #icon2,
+    .faq-icon-flex img{
+        width: 25px;
+    }
+.faq-icon-flex{
+    gap: 10px;
+    padding: 8px 0;
+}
+}
+@media(max-width: 43rem){
+    body {
+        background-image: url('faq-accordion-main/assets/images/background-pattern-desktop.svg');
+    background-size: auto;
+    }
+    .wholeSection{
+        width: 400px;
+    }
+    #section{
+        padding: 20px 30px;
+    }
+    .faqBlock{
+        padding: 5px 0;
+    }
+    .faq-question{
+        font-size: 14px;
+    }
+    .faqBlock.active .faq-icon-flex #icon2,
+    .faq-icon-flex img{
+        width: 25px;
+    }
+    .faqBlock.active .faq-answer{
+        font-size: 10px;
+        line-height: 14px;
+
+    }
+    .questionpadding{
+        padding: 10px 0 0 0;
+    }
+    .accordion-head{
+        font-size: 2rem;
+    }
+
+    .accordion-head-icon img{
+        width: 30px;
+    }
+}
+@media(max-width:35rem){
+    body {
+        background-image: url('faq-accordion-main/assets/images/background-pattern-mobile.svg');
+    background-size: contain;
+    }
+    .wholeSection{
+        width: 350px;
+    }
+    .accordion-head-icon{
+        gap: 10px;
+    }
+    .accordion-head-icon img{
+        width: 25px;
+    }
+    .accordion-head{
+        font-size: 1.6rem;
+    } 
+    .faq-question{
+        font-size: 14px;
+    }
+    .faq-icon-flex{
+        gap: 12px;
+    }
+    .faq-icon-flex img{
+        width: 25px;
+    }
+
+}
